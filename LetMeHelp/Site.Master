@@ -6,7 +6,7 @@
 <head runat="server">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%: Page.Title %> - My ASP.NET Application</title>
+    <title><%: Page.Title %> - LetMeHelp</title>
 
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
@@ -46,13 +46,31 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" runat="server" href="~/">Application name</a>
+                    <a class="navbar-brand" runat="server" href="~/">LetMeHelp</a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/">Home</a></li>
+                        <li><a runat="server" href="~/">Inicio</a></li>
                         <li><a runat="server" href="~/About">About</a></li>
                         <li><a runat="server" href="~/Contact">Contact</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li id="login" runat="server">
+                            <a runat="server" href="~/Login"> 
+                                Entrar
+                                <span class="glyphicon glyphicon-log-in"></span>
+                            </a>
+                        </li>
+                        <li class="dropdown" id="logged" runat="server">
+                            <a id="navbarDropdown" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+                                <asp:Literal runat="server" ID="Nome" />
+                                <span class="glyphicon glyphicon-user"> </span>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" runat="server" href="~/Perfil">Perfil <span class="glyphicon glyphicon-cog"> </span></a></li>
+                                <li><a class="dropdown-item" runat="server" href="~/Logout"> Sair <span class="glyphicon glyphicon-log-out"> </span></a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -62,7 +80,8 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
+                <p>&copy; <%:DateTime.Now.Year %> - LetMeHelp</p>
+                <p>Desenvolvido no âmbito da unidade curricular de Engenharia de Software, integrada no Mestrado em Engenharia Informática.</p>
             </footer>
         </div>
 
