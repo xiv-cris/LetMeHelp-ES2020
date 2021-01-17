@@ -62,7 +62,7 @@ namespace LetMeHelp
                 UserGender = DropDownList1.SelectedItem.Text.Trim(),
                 UserPicLink = "https://www.clipartmax.com/png/middle/296-2969961_no-image-user-profile-icon.png",
                 UserReputation = 0
-        };
+            };
 
             ExecuteInsert(user);
         }

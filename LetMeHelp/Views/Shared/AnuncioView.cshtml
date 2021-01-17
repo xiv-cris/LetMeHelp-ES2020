@@ -1,0 +1,10 @@
+﻿@model  IEnumerable<LetMeHelp.Models.PostModel>
+<h3>Child View (Partial View) </h3>
+<div class="container">
+    <ul>
+        @foreach (var item in Model)
+        {
+            <li>@Html.DisplayFor(m => item.Header)</li>
+        }
+    </ul>
+</div>

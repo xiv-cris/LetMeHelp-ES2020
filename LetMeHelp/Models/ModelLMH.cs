@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
 using System.Linq;
 
@@ -14,8 +15,7 @@ namespace LetMeHelp.Models
         // 
         // If you wish to target a different database and/or database provider, modify the 'ModelLMH' 
         // connection string in the application configuration file.
-        public ModelLMH()
-            : base("name=ModelLMH")
+        public ModelLMH(): base("name=ModelLMH")
         {
         }
 
@@ -48,6 +48,7 @@ namespace LetMeHelp.Models
     public class Post
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int PostId { get; set; }
         public string PostHeader { get; set; }
         public string PostDescription { get; set; }
