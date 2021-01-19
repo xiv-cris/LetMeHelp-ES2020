@@ -11,98 +11,116 @@ namespace LetMeHelp
 {
 
 
-    public partial class VerAnuncio
+    public partial class Perfil
     {
 
         /// <summary>
-        /// imgPost control.
+        /// divErrors control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image imgPost;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divErrors;
 
         /// <summary>
-        /// Titulo control.
+        /// StatusText control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Titulo;
+        protected global::System.Web.UI.WebControls.Literal StatusText;
 
         /// <summary>
-        /// descr control.
+        /// divUpdate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal descr;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divUpdate;
 
         /// <summary>
-        /// oferta control.
+        /// UpdateText control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal oferta;
+        protected global::System.Web.UI.WebControls.Literal UpdateText;
 
         /// <summary>
-        /// Data control.
+        /// imgUser control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal Data;
+        protected global::System.Web.UI.WebControls.Image imgUser;
 
         /// <summary>
-        /// ContactInfo control.
+        /// ImgUpload control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ContactInfo;
+        protected global::System.Web.UI.WebControls.FileUpload ImgUpload;
 
         /// <summary>
-        /// ImgPerfil control.
+        /// NomeDefault control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image ImgPerfil;
+        protected global::System.Web.UI.WebControls.Literal NomeDefault;
 
         /// <summary>
-        /// anunciante control.
+        /// TextBoxNome control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl anunciante;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxNome;
 
         /// <summary>
-        /// anuncDescr control.
+        /// TelDefault control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal anuncDescr;
+        protected global::System.Web.UI.WebControls.Literal TelDefault;
 
         /// <summary>
-        /// anuncTel control.
+        /// TextBoxTel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal anuncTel;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxTel;
+
+        /// <summary>
+        /// RegularExpressionValidator5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator5;
+
+        /// <summary>
+        /// DescriptionDefault control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal DescriptionDefault;
 
         /// <summary>
         /// TextAreaDescription control.
@@ -114,57 +132,39 @@ namespace LetMeHelp
         protected global::System.Web.UI.WebControls.TextBox TextAreaDescription;
 
         /// <summary>
-        /// RequiredFieldValidator8 control.
+        /// TextBoxPass control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator8;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxPass;
 
         /// <summary>
-        /// ButtonE control.
+        /// TextBoxPass2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonE;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxPass2;
 
         /// <summary>
-        /// divMessage control.
+        /// RegularExpressionValidator2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divMessage;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator2;
 
         /// <summary>
-        /// EnvioOK control.
+        /// Button1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal EnvioOK;
-
-        /// <summary>
-        /// divErro control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divErro;
-
-        /// <summary>
-        /// ErroEnviar control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal ErroEnviar;
+        protected global::System.Web.UI.WebControls.Button Button1;
     }
 }

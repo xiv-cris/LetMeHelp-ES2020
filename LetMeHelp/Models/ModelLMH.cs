@@ -52,6 +52,8 @@ namespace LetMeHelp.Models
         public int PostId { get; set; }
         public string PostHeader { get; set; }
         public string PostDescription { get; set; }
+        public string PostOfertaInicial { get; set; }
+        public string PostImg { get; set; }
         public DateTime PostDate { get; set; }
 
         public int UserId { get; set; }

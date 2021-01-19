@@ -22,15 +22,36 @@
         </div>
 
         <div class="form-outline mb-4">
-            <label for="TextBoxDescricao" class="form-label">Descriçao</label><br />
-            <asp:TextBox ID="TextBoxDescricao" CssClass="form-control" runat="server"></asp:TextBox>
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server"   
-                ControlToValidate="TextBoxDescricao" ErrorMessage="Por favor introduza uma descricao!"
+            <label for="TextAreaDescription" class="form-label">Descrição do anúncio:</label>
+            <asp:TextBox id="TextAreaDescription" TextMode="multiline" Columns="50" Rows="5" CssClass="form-control" runat="server" />
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server"   
+                ControlToValidate="TextAreaDescription" ErrorMessage="Por favor introduza uma pequena descrição do que será necessário fazer!"   
                 ForeColor="Red">
             </asp:RequiredFieldValidator>
-            <div style="text-align:center;">
-            </div>
         </div>
+
+        <div class="form-outline mb-4">
+            <label for="TextOferta" class="form-label">Oferta:</label>
+            <asp:TextBox ID="TextOferta" CssClass="form-control" runat="server"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server"   
+                ControlToValidate="TextOferta" ErrorMessage="Por favor introduza uma oferta, não pode ser monetário!"   
+                ForeColor="Red">
+            </asp:RequiredFieldValidator>
+        </div>
+
+        <div class="form-outline mb-4">
+            <label for="ImgUpload" class="form-label">Imagem:</label>
+            
+            <asp:FileUpload ID="ImgUpload" runat="server" />
+            
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server"   
+                ControlToValidate="ImgUpload" ErrorMessage="Por favor introduza uma imagem elucidativa ao anúncio!"   
+                ForeColor="Red">
+            </asp:RequiredFieldValidator>
+        </div>
+
+            
+
         <br />
         <asp:Button ID="Button_CriarAd" CssClass="btn btn-primary mb-4" onclick="ButtonCriar_Click" runat="server" Text="Criar" />
     </form>

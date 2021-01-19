@@ -60,7 +60,7 @@ namespace LetMeHelp
                 UserPass = TextBoxPass.Text.Trim(),
                 UserBio = TextAreaDescription.Text.Trim(),
                 UserGender = DropDownList1.SelectedItem.Text.Trim(),
-                UserPicLink = "https://www.clipartmax.com/png/middle/296-2969961_no-image-user-profile-icon.png",
+                UserPicLink = "~/imgs/profileDefault.png",
                 UserReputation = 0
             };
 
