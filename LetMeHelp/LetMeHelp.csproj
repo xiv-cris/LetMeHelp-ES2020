@@ -266,6 +266,10 @@
     <Compile Include="Logout.aspx.designer.cs">
       <DependentUpon>Logout.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202101232214378_v2.cs" />
+    <Compile Include="Migrations\202101232214378_v2.designer.cs">
+      <DependentUpon>202101232214378_v2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ModelLMH.cs" />
     <Compile Include="Perfil.aspx.cs">
@@ -335,6 +339,11 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202101232214378_v2.resx">
+      <DependentUpon>202101232214378_v2.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

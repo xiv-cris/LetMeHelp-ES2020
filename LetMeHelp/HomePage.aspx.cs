@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using LetMeHelp.Models;
+using System.Web.UI.HtmlControls;
 
 namespace LetMeHelp
 {
@@ -27,26 +28,66 @@ namespace LetMeHelp
 
                 if (db.Posts.Count() == 0)
                 {
-                    form1.Visible = false;
+
                 }
                 else
                 {
                     DivNoPosts.Visible = false;
-                    Listbox_Posts.Items.Clear();
-                    foreach (var _post in db.Posts)
+
+
+                    foreach (var post in db.Posts.ToList().OrderBy(p => p.PostDate))
                     {
-                        Listbox_Posts.Items.Add(_post.PostHeader);
+                        HtmlGenericControl example = new HtmlGenericControl("div");
+
+                        HtmlGenericControl title = new HtmlGenericControl("h2");
+                        title.InnerText = post.PostHeader;
+                        title.ID = post.PostId.ToString();
+
+                        #region Criar um <a href>
+
+                        HtmlGenericControl redirector = new HtmlGenericControl("a");
+                        redirector.InnerHtml = $"<a href=veranuncio?postId={post.PostId}>";
+
+                        #endregion
+
+
+                        HtmlImage image = new HtmlImage();
+
+                        image.Src = post.PostImg;
+                        image.Alt = "Post Image";
+
+                        image.Height = 100;
+                        image.Width = 100;
+
+                        #region Add Elements of Post
+
+                        redirector.Controls.Add(title);
+                        redirector.Controls.Add(image);
+
+                        example.Controls.Add(redirector);
+
+                        //example.Controls.Add(title);
+                        //example.Controls.Add(image);
+
+                        #endregion
+
+                        postsDedicated.Controls.Add(example);
+                        postsDedicated.Controls.Add(new HtmlGenericControl("br"));
                     }
-                    Button1.Text = "+";
                 }
             }
 
 
         }
 
+        protected void ImageClick(object sender, EventArgs e)
+        {
+            Console.WriteLine("This is a test");
+        }
+
         protected void Button1_Click(object sender, EventArgs e)
         {
-            var _selectedPostName = Listbox_Posts.SelectedItem;
+            /*var _selectedPostName = Listbox_Posts.SelectedItem;
 
             if (_selectedPostName == null)
                 return;
@@ -56,7 +97,7 @@ namespace LetMeHelp
                 var _selectedPost = db.Posts.ToList().Find(i => i.PostHeader == _selectedPostName.ToString());
 
                 
-            }
+            }*/
         }
     }
 }

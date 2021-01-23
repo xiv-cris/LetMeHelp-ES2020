@@ -15,17 +15,11 @@
         <p>Thank you for using our service.</p>
     </div>
 
-    <asp:Panel ID="ViewDynamic" runat="server" BorderColor="Black" BorderStyle="Solid" Width="100%" Height="100%">
-        <div id="PostList" class="container" style="width:inherit;height:inherit" runat="server">
-            <form id="form1" runat="server">
-                <div>
-                <asp:ListBox ID="Listbox_Posts" runat="server"></asp:ListBox><br />
-                <br />
-                <asp:Button ID="Button1" runat="server" onclick="Button1_Click" Text="Button"/>
-                </div>
-            </form>
-        </div>
-    </asp:Panel>
+    <section id="postsDedicated" style="text-align:center" runat="server">
+
+    </section>
+
+    
 
 </body>
 </html>
