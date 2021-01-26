@@ -70,5 +70,10 @@ namespace LetMeHelp
                 }
             }
         }
+
+        protected void ButtonNovo_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/CriarAnuncio.aspx");
+        }
     }
 }

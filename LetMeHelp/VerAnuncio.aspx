@@ -9,7 +9,7 @@
             <div class="row g-0">
                 <div class="col-md-4">
                     <asp:Image id="imgPost"
-                        style="height: 270px"
+                        style="height: 270px; width: 350px"
                         runat="server">
                     </asp:Image>
                 </div>

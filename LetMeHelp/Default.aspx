@@ -6,6 +6,8 @@
     <div class="jumbotron">
         <h1>LetMeHelp</h1>
         <p class="lead">Aqui encontrará formas de ajudar o próximo e de pedir ajuda sem ser necessário pagamentos munetários.</p>
+
+        <asp:Button ID="ButtonE" CssClass="btn btn-primary mb-4" onclick="ButtonNovo_Click" runat="server" Text="Novo Anúncio" />
     </div>
 
     <h2>Anúncios</h2>
